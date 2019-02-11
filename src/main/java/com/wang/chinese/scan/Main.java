@@ -15,7 +15,7 @@ public class Main {
 
     public void main (String[] args) throws Exception {
         this.initAnnotateMark();
-        String projectPath = "/Users/wangxiaowen/Documents/fubon/src/";
+        String projectPath = "/Users";
         var fileMap = this.readFile.readFile(projectPath, this.excludeType);
         var keySet = fileMap.keySet();
         for (String key: keySet) {
