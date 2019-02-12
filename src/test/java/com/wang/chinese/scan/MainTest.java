@@ -22,7 +22,6 @@ public class MainTest {
 
     @Test
     public void init() throws IOException {
-        // String filePrefix = "/Users/wangxiaowen/Documents/fubon/src/App.vue";
         System.out.println("头".matches("[\\u4e00-\\u9fa5]"));
     }
 

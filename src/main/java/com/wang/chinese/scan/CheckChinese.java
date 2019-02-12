@@ -39,7 +39,6 @@ public class CheckChinese {
     }
 
     public String translate (String translateVal) throws Exception {
-//        return translateVal;
         var list = new ArrayList();
         var map = new HashMap<String, String>();
         map.put("from", "zh");
@@ -47,7 +46,7 @@ public class CheckChinese {
         map.put("query", translateVal);
         map.put("transtype", "enter");
         map.put("simple_means_flag", "3");
-        map.put("token", "d2d367a94bc0dfb95514016303190ac2");
+        map.put("token", "");
         map.forEach((key, value) -> {
             list.add(new BasicNameValuePair(key, value));
         });
@@ -62,7 +61,7 @@ public class CheckChinese {
         httpPost.setHeader("Host", "fanyi.baidu.com");
         httpPost.setHeader("Origin" ,"https://fanyi.baidu.com");
         httpPost.setHeader("Referer", "https://fanyi.baidu.com/?aldtype=16047");
-        httpPost.setHeader("Cookie", "BAIDUID=2F741B9C9F7DFAA5DD24D9C11E21B172:FG=1; BIDUPSID=2F741B9C9F7DFAA5DD24D9C11E21B172; PSTM=1543580476; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BDSFRCVID=Zt0sJeCCxG3JD_39S25wbuGrFhfpzuq1UpSA3J; H_BDCLCKID_SF=JJkO_D_atKvjDbTnMITHh-F-5fIX5-RLfaQJoPOF5lOTJh0RyxOrDTF9DGof5JQx-ec30tJLb4DaStJbLjbke4tX-NFHqT0J3J; REALTIME_TRANS_SWITCH=1; FANYI_WORD_SWITCH=1; HISTORY_SWITCH=1; SOUND_SPD_SWITCH=1; SOUND_PREFER_SWITCH=1; delPer=0; PSINO=2; H_PS_PSSID=1462_21096_28328_26350; locale=zh; Hm_lvt_64ecd82404c51e03dc91cb9e8c025574=1549286195,1549287501,1549432084; Hm_lpvt_64ecd82404c51e03dc91cb9e8c025574=1549432084; from_lang_often=%5B%7B%22value%22%3A%22en%22%2C%22text%22%3A%22%u82F1%u8BED%22%7D%2C%7B%22value%22%3A%22zh%22%2C%22text%22%3A%22%u4E2D%u6587%22%7D%5D; to_lang_often=%5B%7B%22value%22%3A%22zh%22%2C%22text%22%3A%22%u4E2D%u6587%22%7D%2C%7B%22value%22%3A%22en%22%2C%22text%22%3A%22%u82F1%u8BED%22%7D%2C%7B%22value%22%3A%22cht%22%2C%22text%22%3A%22%u4E2D%u6587%u7E41%u4F53%22%7D%5D");
+        httpPost.setHeader("Cookie", "");
         httpPost.setHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36");
         httpPost.setHeader("X-Requested-With", "XMLHttpRequest");
         httpPost.setEntity(new UrlEncodedFormEntity(list, Charset.forName("utf-8")));
@@ -106,7 +105,6 @@ public class CheckChinese {
         } else {
             throw new Exception("签名文件不存在，当前查找的文件路径为:" + signJsPath);
         }
-//        System.out.println(sginJs.exists());
         return result;
     }
 
